@@ -6,4 +6,11 @@ compatibility_date = "2024-03-23"
 command = "pip install -r requirements.txt"
 
 [site]
-bucket = "." 
+bucket = "."
+
+[env.production]
+workers_dev = true
+
+[[routes]]
+pattern = "/*"
+zone_id = "your-zone-id" 

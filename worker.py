@@ -41,4 +41,11 @@ def handle_request(request):
 
 def main(request):
     """Main entry point for Cloudflare Workers"""
-    return handle_request(request) 
+    try:
+        return handle_request(request)
+    except Exception as e:
+        return Response(
+            json.dumps({'error': str(e)}),
+            status=500,
+            headers={'Content-Type': 'application/json'}
+        ) 
