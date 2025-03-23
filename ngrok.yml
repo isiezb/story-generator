@@ -1,0 +1,6 @@
+version: 2
+authtoken: 2ufyRQgG02T4FRGKl7gb4Lh7Xx1_2cas1YU266XRbFJNq7C5
+tunnels:
+  flask:
+    proto: http
+    addr: 5002 
